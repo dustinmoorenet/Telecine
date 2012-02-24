@@ -17,7 +17,7 @@
       </header>
       <nav>
         <ul>
-          <li><a href="index.php">Introduction</a></li>
+          <li><a class="selected" href="index.php">Introduction</a></li>
           <li><a href="operation.php">Theory of Operation</a></li>
           <li><a href="application.php">Application</a></li>
           <li><a href="problems.php">Problems</a></li>

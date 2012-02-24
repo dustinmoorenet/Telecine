@@ -1,5 +1,6 @@
 body {
   background: #C9E892;
+  color: #444;
 }
 
 #container {
@@ -19,12 +20,15 @@ h1, h2, h3 {
 }
 
 a {
-  color: #000;
+  color: #666;
   text-decoration: none;
 }
 
 a:link,
-a:visited,
+a:visited {
+  color: #666;
+}
+
 a:hover,
 a:active {
   color: #000;
@@ -56,6 +60,11 @@ nav li a {
   border: #aaa 1px solid;
 }
 
+nav li a.selected {
+  border-color: #444;
+  color: #444;
+}
+
 nav li a:hover {
   background: #eee;
   border-color: #444;
@@ -76,8 +85,12 @@ nav li a:hover {
   padding: 0 0 20px;
 }
 
-#content p {
-  text-align: left;
+p {
+  text-align: justify;
+}
+
+p:first-letter {
+  font-size: 1.5em;
 }
 
 #content img {
@@ -94,6 +107,10 @@ nav li a:hover {
 
 #content .panel {
   float: left;
+}
+
+#content .panel p:first-letter {
+  font-size: 1em;
 }
 
 #content .panel-control {
