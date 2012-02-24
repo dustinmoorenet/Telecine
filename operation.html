@@ -1,0 +1,86 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Theory of Operation - Project Telecine - Dustin Moore</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+        <link rel="stylesheet" type="text/css" href="styles/main.css" title="Contemporary"/>
+        <link rel="stylesheet" type="text/css" href="styles/heading.css" title="Contemporary"/>
+        <link rel="stylesheet" type="text/css" href="styles/nav.css" title="Contemporary"/>
+        <link rel="stylesheet" type="text/css" href="styles/content.css" title="Contemporary"/>         
+    </head>
+    <body>    
+        <div id="heading">
+            <div id="line-1">Project Telecine</div>
+            <div id="line-2">Film to Video on the cheap</div>
+        </div>
+        <table id="container"><tr>
+            
+            <td id="nav">
+            <table class="nav-button">
+                <tr><td class="nav-top-left-corner"></td><td class="nav-top-row"></td><td class="nav-top-right-corner"></td></tr>
+                <tr>
+                    <td class="nav-left-side"></td>
+                    <td class="nav-content" onclick="window.location.href='intro.html'">Introduction</td>
+                    <td class="nav-right-side"></td>
+                </tr>
+                <tr><td class="nav-bottom-left-corner"></td><td class="nav-bottom-row"></td><td class="nav-bottom-right-corner"></td></tr>
+            </table>
+            <table class="nav-button">
+                <tr><td class="nav-top-left-corner"></td><td class="nav-top-row"></td><td class="nav-top-right-corner"></td></tr>
+                <tr>
+                    <td class="nav-left-side"></td>
+                    <td class="nav-content" onclick="window.location.href='operation.html'">Theory of Operation</td>
+                    <td class="nav-right-side"></td>
+                </tr>
+                <tr><td class="nav-bottom-left-corner"></td><td class="nav-bottom-row"></td><td class="nav-bottom-right-corner"></td></tr>
+            </table>
+            <table class="nav-button">
+                <tr><td class="nav-top-left-corner"></td><td class="nav-top-row"></td><td class="nav-top-right-corner"></td></tr>
+                <tr>
+                    <td class="nav-left-side"></td>
+                    <td class="nav-content" onclick="window.location.href='application.html'">Application</td>
+                    <td class="nav-right-side"></td>
+                </tr>
+                <tr><td class="nav-bottom-left-corner"></td><td class="nav-bottom-row"></td><td class="nav-bottom-right-corner"></td></tr>
+            </table>
+            <table class="nav-button">
+                <tr><td class="nav-top-left-corner"></td><td class="nav-top-row"></td><td class="nav-top-right-corner"></td></tr>
+                <tr>
+                    <td class="nav-left-side"></td>
+                    <td class="nav-content" onclick="window.location.href='problems.html'">Problems</td>
+                    <td class="nav-right-side"></td>
+                </tr>
+                <tr><td class="nav-bottom-left-corner"></td><td class="nav-bottom-row"></td><td class="nav-bottom-right-corner"></td></tr>
+            </table>
+            <table class="nav-button">
+                <tr><td class="nav-top-left-corner"></td><td class="nav-top-row"></td><td class="nav-top-right-corner"></td></tr>
+                <tr>
+                    <td class="nav-left-side"></td>
+                    <td class="nav-content" onclick="window.location.href='conclusion.html'">Conclusion</td>
+                    <td class="nav-right-side"></td>
+                </tr>
+                <tr><td class="nav-bottom-left-corner"></td><td class="nav-bottom-row"></td><td class="nav-bottom-right-corner"></td></tr>
+            </table>
+            </td> 
+            
+            <td id="content"><table>
+                <tr><td class="content-top-left-corner"></td><td class="content-top-row"></td><td class="content-top-right-corner"></td></tr>
+                <tr>
+                    <td class="content-left-side"></td>
+                    <td class="content">
+                        <div id="page-title">Theory of Operation</div>
+                        <div class="content-text">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The operation of the system can be broken down into three areas.  The first area involves getting the film scanned by the flatbed scanner.  The second area involves taking the film scans and pulling the frames from them and into individual images files.  The last area is taking the image frames and compiling them into a video file.  The first area is by far the hardest of the three, because it requires automating operations in the physical world.</div>
+                        <div class="content-text">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;For the system to work, every inch of film has to be scanned in a systematic way so that no frame is excluded or duplicated.  To accomplish this, I designed a gearbox that tracked the amount of film that it moved.  The gearbox, being on one side of the scanner, slowly moves the film from a spool on the other side of the scanner.  The film is guided by rollers and is wound up by a motor controlled film spool.  Before the film is spooled up, the film passes over a film sprocket that meshes with the sprocket holes on the film.  The movement turns the sprocket in proportion to the amount of film passing over the scanner's glass.  Once a predetermined amount of sprocket rotation has occurred, the gearbox stops the uptake spool.  The film is then scanned and saved on the computer.  The process is repeated until all film has been scanned.  This whole operation only requires the operators to setup the system and to start it.</div>
+                        <div class="content-text">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The second area, involves getting the frames from the film scans.  This sounds complex, but really isn't, as long as the film was scanned in accurate intervals.  This means that the first frame in an image scan must be in a highly predictable position.  The operation starts by leveling the film, but most of the time the film is very straight as it comes through the scanner.  Next the first sprocket hole has to be found.  Just as in a normal projector, the sprocket holes are used as registers to determine the location of frames.  Once the hole is found, the hole's center is calculated.  The location of the frame is then determined by the hole's center.  The process is repeated for as many frames as are expected in the film scan.  So the operation consists of: finding the sprocket hole; determining its center; and pulling the frame by reference of the center of the sprocket hole.  Each frame is saved as an image file and is given a sequentially numbered filename that relates to its order on the film spool.</div>
+                        <div class="content-text">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The last area is the easiest, because no software needs to be written or elaborate contraption needs to fabricated.  The numbered image frames are processed into a video file that best suits its intended destination.  In this case, a 30 fps MPEG-2 video to be burned as a DVD.  The native frame rate of the film is 18 fps, but I found that dropping that to 15 fps and doubling each frame made for an easy and visually appealing match with the required 30 fps needed for NTSC output.  Since there is no audio track on the film, no audio needs to be synced with the video, but music can be added easily if desired.</div>
+                    </td>
+                    <td class="content-right-side"></td>
+                </tr>
+                <tr><td class="content-bottom-left-corner"></td><td class="content-bottom-row"></td><td class="content-bottom-right-corner"></td></tr>
+            </table></td>
+            
+        </tr></table>
+        <div id="footer">&copy; 2007 by Dustin J. Moore. All Rights Reserved.
+        </div>        
+    </body>
+</html>

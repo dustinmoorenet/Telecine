@@ -1,0 +1,76 @@
+
+#nav {	
+    vertical-align: top;
+    width: 185px;
+    text-align: left;
+    padding-top: 11px;
+    font-family: Courier New;
+    font-size: 10pt;
+}
+td.nav-content:hover {
+    cursor: pointer;
+}
+.nav-button {
+	margin: 0px 20px 15px 10px;
+}
+.nav-top-left-corner {
+	background-image: url('images/recess-top-left-corner.png');
+	background-repeat: no-repeat;
+	background-position: right;	
+	width: 12px;
+	height: 12px;
+}
+.nav-top-row {
+	background-image: url('images/recess-top-row.png');
+	background-repeat: repeat-x;
+	background-position: top;
+	width: 130px;
+	height: 12px;
+}
+.nav-top-right-corner {
+	background-image: url('images/recess-top-right-corner.png');
+	background-repeat: no-repeat;
+	background-position: left;
+	width: 12px;
+	height: 12px;
+}
+.nav-left-side {
+	background-image: url('images/recess-left-side.png');
+	background-repeat: repeat-y;
+	background-position: right;
+	width: 12px;
+	height: 100%;
+}
+td.nav-content {
+	background-color: #FFFFFF;
+}
+.nav-right-side {
+	background-image: url('images/recess-right-side.png');
+	background-repeat: repeat-y;
+	background-position: left;
+	width: 12px;
+	height: 100%;
+}
+.nav-bottom-left-corner {
+	background-image: url('images/recess-bottom-left-corner.png');
+	background-repeat: no-repeat;
+	background-position: right;
+	width: 12px;
+	height: 12px;
+}
+.nav-bottom-row {
+	background-image: url('images/recess-bottom-row.png');
+	background-repeat: repeat-x;
+	background-position: top;
+	width: 130px;
+	height: 12px;
+}
+.nav-bottom-right-corner {
+	background-image: url('images/recess-bottom-right-corner.png');
+	background-repeat: no-repeat;
+	background-position: left;
+	width: 12px;
+	height: 12px;
+}
+
+       

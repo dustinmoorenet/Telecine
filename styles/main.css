@@ -1,0 +1,141 @@
+body {
+  background: #C9E892;
+}
+
+#container {
+  margin: 0 auto;
+  padding: 0;
+  width: 1000px;
+}
+
+#container > header {
+  text-align: center;
+  padding: 10px 0 20px;
+}
+
+h1, h2, h3 {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+  color: #000;
+}
+
+
+nav {
+  float: left;
+  width: 200px;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0 20px 0 0;
+}
+
+nav li {
+
+}
+
+nav li a {
+  display: block;
+  background: #fff;
+  padding: 10px;
+  margin: 0 0 10px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: .8em;
+  border: #aaa 1px solid;
+}
+
+nav li a:hover {
+  background: #eee;
+  border-color: #444;
+}
+
+#content {
+  position: relative;
+  float: left;
+  width: 500px;
+  background: #fff;
+  padding: 20px 95px;
+  text-align: center;
+  border: #aaa 1px solid;
+  overflow: hidden;
+}
+
+#content header {
+  padding: 0 0 20px;
+}
+
+#content p {
+  text-align: left;
+}
+
+#content img {
+  background: #fff;
+  padding: 10px;
+  border: #aaa 1px solid;
+  margin: 0 0 10px;
+}
+
+#content img:hover {
+  border-color: #444;
+  cursor: pointer;
+}
+
+#content .panel {
+  float: left;
+}
+
+#content .panel-control {
+  position: absolute;
+  width: 20px;
+  height: 120px;
+  background: url('../images/icons.png');
+  opacity: 0.4;
+  filter:alpha(opacity=40); /* For IE8 and earlier */
+}
+
+#content #panel_prev {
+  top: 125px;
+  left: 40px;
+  background-position: 0px 0px;
+}
+
+#content #panel_next {
+  top: 125px;
+  right: 40px;
+  background-position: -20px 0px;
+}
+
+#content .panel-control:hover {
+  opacity: 0.3;
+  filter:alpha(opacity=30); /* For IE8 and earlier */
+  cursor: pointer;
+}
+
+#content .panel-control.disabled {
+  background: none;
+}
+
+#content .panel-control.disabled:hover {
+  background: #fff;
+  cursor: auto;
+}
+
+footer {
+  clear: both;
+  text-align: center;
+  padding: 20px 0 30px;
+  font-weight: bold;
+  font-size: .7em;
+}
