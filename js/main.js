@@ -6,7 +6,7 @@ UI.SlideShow = (function() {
 
   function _init() {
   
-    _total_width = $('#content').width();
+    _total_width = $('#slide_show').width();
 
     if ($('section.panel').length > 1) {
       $('section.panel').width(_total_width - 2).hide().first().show();
@@ -17,8 +17,6 @@ UI.SlideShow = (function() {
   
       $('#panel_prev').click(_prev);
       $('#panel_next').click(_next);
-  
-      $('#content').height(500);
     }
   }
   

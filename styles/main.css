@@ -1,4 +1,5 @@
 body {
+  font-family: 'Alegreya SC', serif;
   background: #C9E892;
   color: #444;
 }
@@ -17,6 +18,19 @@ body {
 h1, h2, h3 {
   margin: 0;
   padding: 0;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+h2 {
+  font-size: 1.2em;
+}
+
+h3 {
+  font-size: 1.5em;
 }
 
 a {
@@ -87,6 +101,7 @@ nav li a:hover {
 
 p {
   text-align: justify;
+  font-size: .9em;
 }
 
 p:first-letter {
@@ -105,15 +120,19 @@ p:first-letter {
   cursor: pointer;
 }
 
-#content .panel {
+#slide_show {
+  height: 500px;
+}
+
+#slide_show .panel {
   float: left;
 }
 
-#content .panel p:first-letter {
+#slide_show .panel p:first-letter {
   font-size: 1em;
 }
 
-#content .panel-control {
+#slide_show .panel-control {
   position: absolute;
   width: 20px;
   height: 120px;
@@ -122,34 +141,88 @@ p:first-letter {
   filter:alpha(opacity=40); /* For IE8 and earlier */
 }
 
-#content #panel_prev {
+#slide_show #panel_prev {
   top: 125px;
   left: 40px;
   background-position: 0px 0px;
 }
 
-#content #panel_next {
+#slide_show #panel_next {
   top: 125px;
   right: 40px;
   background-position: -20px 0px;
 }
 
-#content .panel-control:hover {
+#slide_show .panel-control:hover {
   opacity: 0.3;
   filter:alpha(opacity=30); /* For IE8 and earlier */
   cursor: pointer;
 }
 
-#content .panel-control.disabled {
+#slide_show .panel-control.disabled {
   background: none;
 }
 
-#content .panel-control.disabled:hover {
+#slide_show .panel-control.disabled:hover {
   background: #fff;
   cursor: auto;
 }
 
-footer {
+#content > footer {
+  padding: 20px 0 0;
+  height: 50px;
+  color: #222;
+}
+
+#content > footer > div {
+  opacity: 0.9;
+  filter:alpha(opacity=90); /* For IE8 and earlier */
+}
+
+#content > footer > div:hover {
+  opacity: 0.4;
+  filter:alpha(opacity=40); /* For IE8 and earlier */
+  cursor: pointer;
+}
+
+#content > footer div div {
+  background: url('../images/icons.png') no-repeat;
+}
+
+#content > footer .prev {
+  float: left;
+}
+
+#content > footer .prev div {
+  float: left;
+  width: 10px;
+  height: 20px;
+  margin-right: 10px;
+  background-position: -40px 0px;
+}
+
+#content > footer .next {
+  float: right;
+}
+
+#content > footer .next div {
+  float: right;
+  width: 10px;
+  height: 20px;
+  margin-left: 10px;
+  background-position: -40px -20px;
+}
+
+#content > footer a:link,
+#content > footer a:visited,
+#content > footer a:hover,
+#content > footer a:active {
+  display: block;
+  color: #222;
+}
+
+
+#container > footer {
   clear: both;
   text-align: center;
   padding: 20px 0 30px;
