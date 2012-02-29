@@ -3,9 +3,10 @@
   <head>
     <title>Application - Project Telecine - Dustin Moore</title>
     <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
     <link href="http://fonts.googleapis.com/css?family=Alegreya+SC:400" rel="stylesheet" type="text/css">
     <link type="text/css" rel="stylesheet" href="styles/normalize.css" /> 
-    <link type="text/css" rel="stylesheet" href="styles/main.css" /> 
+    <link type="text/css" rel="stylesheet" media="screen" href="styles/main.css" /> 
     <script type="text/javascript" src="js/modernizr.min.js"></script>
     <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
     <script type="text/javascript" src="js/main.js"></script>

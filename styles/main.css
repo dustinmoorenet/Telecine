@@ -10,6 +10,13 @@ body {
   width: 1000px;
 }
 
+@media screen and (max-width: 1000px) {
+  #container {
+    margin: 0;
+    width: auto;
+  }
+}
+
 #container > header {
   text-align: center;
   padding: 10px 0 20px;
@@ -71,7 +78,13 @@ nav li a {
   text-transform: uppercase;
   font-weight: bold;
   font-size: .8em;
+  color: #aaa;
   border: #aaa 1px solid;
+}
+
+nav li a:link,
+nav li a:visited {
+  color: #aaa;
 }
 
 nav li a.selected {
@@ -79,17 +92,44 @@ nav li a.selected {
   color: #444;
 }
 
-nav li a:hover {
+nav li a:hover,
+nav li a:active {
   background: #eee;
+  color: #000;
   border-color: #444;
+}
+
+@media screen and (max-width: 1000px) {
+  nav {
+    float: none;
+    width: auto;
+    height: auto;
+    text-align: center;
+  }
+
+  nav ul {
+    padding: 0;
+  }
+
+  nav li {
+    display: inline;
+  }
+
+  nav li a {
+    display: inline;
+  }
+
+  nav li a.selected {
+    font-size: 1.1em;
+  }
 }
 
 #content {
   position: relative;
   float: left;
   width: 500px;
-  background: #fff;
   padding: 20px 95px;
+  background: #fff;
   text-align: center;
   border: #aaa 1px solid;
   overflow: hidden;
@@ -97,6 +137,26 @@ nav li a:hover {
 
 #content header {
   padding: 0 0 20px;
+}
+
+@media screen and (max-width: 1000px) {
+  #content {
+    float: none;
+    margin: 0 auto;
+  }
+
+  #content header {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 690px) {
+  #content {
+    border-right: 0;
+    border-left: 0;
+    padding: 20px 14%;
+    width: auto;
+  }
 }
 
 p {
