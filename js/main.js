@@ -15,7 +15,7 @@ UI.Nav = (function() {
 
   function _buildNav() {
     var $selected = $('nav a.selected');
-    var $not_selected = $('nav a:not(.selected)');
+    var $all = $('nav a');
 
     if ($(document).width() < 691) {
 
@@ -24,7 +24,7 @@ UI.Nav = (function() {
         $selected.click(function(e) {
           e.preventDefault();
 
-          $not_selected.toggleClass('expanded');
+          $all.toggleClass('expanded');
         })
         .addClass('collapsed');
       }
@@ -32,7 +32,7 @@ UI.Nav = (function() {
     } else if ($selected.hasClass('collapsed')) {
 
       $selected.unbind('click').removeClass('collapsed');
-      $not_selected.show();
+      $all.show();
     }
   }
 
@@ -42,20 +42,47 @@ UI.SlideShow = (function() {
   $(_init);
 
   var _total_width = 0;
+  var _$prev_ctrl;
+  var _$next_ctrl;
+  var _$all_panels;
 
   function _init() {
   
     _total_width = $('#slide_show').width();
+    _$all_panels = $('section.panel');
 
-    if ($('section.panel').length > 1) {
-      $('section.panel').width(_total_width - 2).hide().first().show();
-      $('section.panel p').width(_total_width - 2);
-  
-      $('section.panel').first().before('<div id="panel_prev" class="panel-control disabled"></div>');
-      $('section.panel').last().after('<div id="panel_next" class="panel-control"></div>');
-  
-      $('#panel_prev').click(_prev);
-      $('#panel_next').click(_next);
+    _$all_panels.first().before('<div id="panel_prev" class="panel-control disabled"></div>');
+    _$all_panels.last().after('<div id="panel_next" class="panel-control"></div>');
+
+    _$prev_ctrl = $('#panel_prev').click(_prev);
+    _$next_ctrl = $('#panel_next').click(_next);
+
+    $(window).resize(_build);
+
+    _build();
+  }
+
+  function _build() {
+
+    if ($(document).width() > 690) {
+
+      if (!_$all_panels.hasClass('collapsed')) {
+
+        _$all_panels.addClass('collapsed')
+                    .width(_total_width - 2)
+                    .hide()
+                    .first().show();
+        $('section.panel p').width(_total_width - 2);
+
+        _$prev_ctrl.show();
+        _$next_ctrl.show();
+      }
+    } else if (_$all_panels.hasClass('collapsed')) {
+
+      _$all_panels.removeClass('collapsed').show().width('auto');
+      $('section.panel p').width('auto');
+      _$prev_ctrl.hide();
+      _$next_ctrl.hide();
     }
   }
   

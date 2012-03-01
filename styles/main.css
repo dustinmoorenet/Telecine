@@ -113,7 +113,7 @@ nav li a:active {
 
   nav ul {
     display: inline-block;
-    width: 170px;
+    width: 190px;
     background: #fff;
     padding: 0;
     margin: 0;
@@ -123,14 +123,14 @@ nav li a:active {
 
   nav li {
     display: block;
-    width: 170px;
+    width: 190px;
     padding: 0;
     margin: 0;
   }
 
   nav li a {
     display: none;
-    width: 150px;
+    width: 170px;
     margin: 0;
     color: #666;
     border: 0;
@@ -148,12 +148,18 @@ nav li a:active {
   }
   
   nav li a.selected {
+    background: url('../images/icons.png') 175px -125px no-repeat;
     color: #444;
     display: block;
     border-color: #aaa;
   }
 
+  nav li a.selected:hover {
+    background-color: #eee;
+  }
+
   nav li a.expanded {
+    background-image: none;
     display: block;
   }
 }
