@@ -1,4 +1,43 @@
 var UI = {};
+
+UI.Nav = (function() {
+  $(_init);
+
+  var _$nav;
+
+  function _init() {
+    _$nav = $('nav');
+
+    $(window).resize(_buildNav);
+
+    _buildNav();
+  }
+
+  function _buildNav() {
+    var $selected = $('nav a.selected');
+    var $not_selected = $('nav a:not(.selected)');
+
+    if ($(document).width() < 691) {
+
+      if (!$selected.hasClass('collapsed')) {
+
+        $selected.click(function(e) {
+          e.preventDefault();
+
+          $not_selected.toggleClass('expanded');
+        })
+        .addClass('collapsed');
+      }
+
+    } else if ($selected.hasClass('collapsed')) {
+
+      $selected.unbind('click').removeClass('collapsed');
+      $not_selected.show();
+    }
+  }
+
+})();
+
 UI.SlideShow = (function() {
   $(_init);
 
