@@ -13,10 +13,10 @@
       <p>The first design did not have a way to pick up the film and used the film sprocket to pull the film over the scanner.</p>
     </section>
     <section class="panel">
-      <img data-full-size="images/close-up-gear-box.jpg" alt="Close up of the gear box" src="images/close-up-gear-box-thumb.jpg" /><br />
+      <img data-full-size="images/close-up-gear-box.jpg" alt="Close up of the gear box" src="images/close-up-gear-box-thumb.jpg" />
     </section>
     <section class="panel">
-      <img data-full-size="images/gear-box-open.jpg" alt="open gear box" src="images/gear-box-open-thumb.jpg" /><br />
+      <img data-full-size="images/gear-box-open.jpg" alt="open gear box" src="images/gear-box-open-thumb.jpg" />
     </section>
     <section class="panel">
       <img data-full-size="images/gear-box-design.gif" alt="gear box design" src="images/gear-box-design-thumb.gif" />
@@ -39,7 +39,7 @@
       <p>I made the film rollers out of nylon spacers and washers.</p>
     </section>
     <section class="panel">
-      <img data-full-size="images/sprocket-no-film.jpg" alt="film sprocket with no film" src="images/sprocket-no-film-thumb.jpg" /><br />
+      <img data-full-size="images/sprocket-no-film.jpg" alt="film sprocket with no film" src="images/sprocket-no-film-thumb.jpg" />
     </section>
     <section class="panel">
       <img data-full-size="images/sprocket-film.jpg" alt="film sprocket with film" src="images/sprocket-film-thumb.jpg" />
@@ -54,7 +54,7 @@
       <p>One revolution of the sprocket is detected by the gearbox by using a cam and switch.</p>
     </section>
     <section class="panel">
-      <img data-full-size="images/circuit-board.jpg" alt="the circuit board" src="images/circuit-board-thumb.jpg" /><br />
+      <img data-full-size="images/circuit-board.jpg" alt="the circuit board" src="images/circuit-board-thumb.jpg" />
     </section>
     <section class="panel">
       <img data-full-size="images/circuit-diagram.gif" alt="the circuit board diagram" src="images/circuit-diagram-thumb.gif" />

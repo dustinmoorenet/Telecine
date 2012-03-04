@@ -48,7 +48,6 @@ UI.SlideShow = (function() {
 
   function _init() {
   
-    _total_width = $('#slide_show').width();
     _$all_panels = $('section.panel');
 
     _$all_panels.first().before('<div id="panel_prev" class="panel-control disabled"></div>');
@@ -66,6 +65,8 @@ UI.SlideShow = (function() {
 
     if ($(document).width() > 690) {
 
+      _total_width = $('#slide_show').width();
+
       if (!_$all_panels.hasClass('collapsed')) {
 
         _$all_panels.addClass('collapsed')
@@ -73,16 +74,12 @@ UI.SlideShow = (function() {
                     .hide()
                     .first().show();
         $('section.panel p').width(_total_width - 2);
-
-        _$prev_ctrl.show();
-        _$next_ctrl.show();
       }
+
     } else if (_$all_panels.hasClass('collapsed')) {
 
       _$all_panels.removeClass('collapsed').show().width('auto');
       $('section.panel p').width('auto');
-      _$prev_ctrl.hide();
-      _$next_ctrl.hide();
     }
   }
   
@@ -114,5 +111,32 @@ UI.SlideShow = (function() {
         $('#panel_next, #panel_prev').removeClass('disabled');
       }
     });
+  }
+})();
+
+UI.Images = (function() {
+  $(_init);
+
+  var _$images;
+
+  function _init() {
+    _$images = $('section.panel img');
+
+    _$images.click(_open);
+  }
+
+  function _open() {
+    if ($(document).width() < 691) {
+      window.location.href = $(this).data('full-size');
+    } else {
+
+      $('#image_viewer').show();
+
+      $('#image_viewer img').attr('src', $(this).data('full-size')).click(_close);
+    }
+  }
+
+  function _close() {
+    $('#image_viewer').hide();
   }
 })();
