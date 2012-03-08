@@ -13,7 +13,7 @@
       <p>The first design did not have a way to pick up the film and used the film sprocket to pull the film over the scanner.</p>
     </section>
     <section class="panel">
-      <img data-full-size="images/close-up-gear-box.jpg" alt="Close up of the gear box" src="images/close-up-gear-box-thumb.jpg" />
+      <img data-full-size="images/close-up-gear-box.JPG" alt="Close up of the gear box" src="images/close-up-gear-box-thumb.jpg" />
     </section>
     <section class="panel">
       <img data-full-size="images/gear-box-open.jpg" alt="open gear box" src="images/gear-box-open-thumb.jpg" />

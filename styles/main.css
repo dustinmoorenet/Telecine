@@ -1,6 +1,7 @@
 body {
   font-family: 'Alegreya SC', serif;
   background: #C9E892;
+  background: url('../images/background.png');
   color: #444;
 }
 
@@ -67,36 +68,65 @@ nav ul {
 }
 
 nav li {
+  display: block;
+  -moz-box-shadow: 0px 0px 6px rgba(0,0,0,.55);
+  -webkit-box-shadow: 0px 0px 6px rgba(0,0,0,.55);
+  box-shadow: 0px 0px 6px rgba(0,0,0,.55);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#444444')";
+  filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#444444');
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -khtml-border-radius: 3px;
+  border-radius: 3px;
+  padding: 3px;
+  background: url('../images/leather.png');
+  margin: 0 0 10px;
 
+}
+
+nav li.operation {
+  background-position: -20px -20px;
+}
+
+nav li.application {
+  background-position: 40px -40px;
+}
+
+nav li.problems {
+  background-position: -60px 60px;
+}
+
+nav li.conclusion {
+  background-position: 80px -80px;
 }
 
 nav li a {
   display: block;
-  background: #fff;
-  padding: 10px;
-  margin: 0 0 10px;
+  padding: 7px;
   text-transform: uppercase;
   font-weight: bold;
   font-size: .8em;
-  color: #aaa;
-  border: #aaa 1px solid;
+  color: rgba(0,0,0,.45);
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -khtml-border-radius: 3px;
+  border-radius: 3px;
+  border: 2px dashed rgba(0,0,0, .20);
 }
 
 nav li a:link,
 nav li a:visited {
-  color: #aaa;
+  color: rgba(0,0,0,.45);
 }
 
 nav li a.selected {
-  border-color: #444;
   color: #444;
+  color: rgba(0,0,0,.60);
 }
 
 nav li a:hover,
 nav li a:active {
-  background: #eee;
-  color: #000;
-  border-color: #444;
+  color: rgba(0,0,0,.85);
 }
 
 @media screen and (max-width: 690px) {
@@ -107,60 +137,86 @@ nav li a:active {
     height: auto;
     text-align: center;
     position: relative;
-    z-index: 10;
     height: 60px;
+    z-index: 10;
   }
 
   nav ul {
     display: inline-block;
     width: 190px;
-    background: #fff;
-    padding: 0;
     margin: 0;
-    border: 1px solid #aaa;
-    border-bottom: 0;
+    padding: 0;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -khtml-border-radius: 3px;
+    border-radius: 3px;
+    background: url('../images/paper.png');
+    -moz-box-shadow: 0px 0px 6px rgba(0,0,0,.55);
+    -webkit-box-shadow: 0px 0px 6px rgba(0,0,0,.55);
+    box-shadow: 0px 0px 6px rgba(0,0,0,.55);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#444444')";
+    filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#444444');
   }
 
   nav li {
-    display: block;
-    width: 190px;
-    padding: 0;
+    display: none;
+    width: 184px;
+    padding: 3px;
     margin: 0;
   }
 
   nav li a {
-    display: none;
+    display: block;
     width: 170px;
     margin: 0;
-    color: #666;
+    color: rgba(0,0,0,.55);
     border: 0;
-    border-bottom: 1px solid #aaa;
   }
 
   nav li a:link,
   nav li a:visited {
-    color: #666;
+    color: rgba(0,0,0,.55);
   }
   
   nav li a:hover,
   nav li a:active {
-    border-color: #aaa;
+    color: rgba(0,0,0,.75);
   }
   
-  nav li a.selected {
-    background: url('../images/icons.png') 175px -125px no-repeat;
-    color: #444;
+  nav li.selected {
     display: block;
-    border-color: #aaa;
+    -moz-box-shadow: 0px 0px 6px rgba(0,0,0,.55);
+    -webkit-box-shadow: 0px 0px 6px rgba(0,0,0,.55);
+    box-shadow: 0px 0px 6px rgba(0,0,0,.55);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#444444')";
+    filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#444444');
   }
 
-  nav li a.selected:hover {
-    background-color: #eee;
+  nav li.selected a {
+    background: url('../images/icons.png') 168px -127px no-repeat;
+    width: 166px;
+    border: 2px dashed rgba(0,0,0, .20);
+    color: rgba(0,0,0,.75);
+    display: block;
   }
 
-  nav li a.expanded {
+  nav li.selected a:hover,
+  nav li.selected a:active {
+  }
+
+  nav li.expanded {
+    display: block;
     background-image: none;
-    display: block;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    -ms-filter: none;
+    filter: none;
+  }
+
+  nav li.expanded a {
+    background-image: none;
+    border: 0;
   }
 }
 
@@ -170,6 +226,7 @@ nav li a:active {
     width: auto;
     height: auto;
     text-align: center;
+    margin-bottom: -20px;
   }
 
   nav ul {
@@ -177,15 +234,25 @@ nav li a:active {
   }
 
   nav li {
-    display: inline;
+    display: inline-block;
   }
 
   nav li a {
-    display: inline;
+    display: inline-block;
   }
 
-  nav li a.selected {
-    font-size: 1.1em;
+  nav li.selected {
+    padding: 5px;
+    font-size: 1.3em;
+    -moz-box-shadow: 0px 0px 9px rgba(0,0,0,.55);
+    -webkit-box-shadow: 0px 0px 9px rgba(0,0,0,.55);
+    box-shadow: 0px 0px 9px rgba(0,0,0,.55);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#444444')";
+    filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#444444');
+  }
+
+  nav li.selected a {
+    border: 3px dashed rgba(0,0,0, .20);
   }
 }
 
@@ -196,8 +263,13 @@ nav li a:active {
   padding: 20px 95px;
   background: #fff;
   text-align: center;
-  border: #aaa 1px solid;
   overflow: hidden;
+  background: url('../images/paper.png');
+  box-shadow: 0px 0px 10px rgba(0,0,0,.55);
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -khtml-border-radius: 2px;
+  border-radius: 2px;
 }
 
 #content header {
@@ -250,11 +322,53 @@ p:first-letter {
   padding: 10px;
   border: #aaa 1px solid;
   margin: 0 0 10px;
+  -moz-box-shadow: 0px 0px 3px rgba(0,0,0,.55);
+  -webkit-box-shadow: 0px 0px 3px rgba(0,0,0,.55);
+  box-shadow: 0px 0px 3px rgba(0,0,0,.55);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#444444')";
+  filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#444444');
+}
+
+#content img.rotate-0 {
+  -webkit-transform: rotate(1deg);
+  -moz-transform: rotate(1deg);
+}
+
+#content img.rotate-1 {
+  -webkit-transform: rotate(0.5deg);
+  -moz-transform: rotate(2deg);
+}
+
+#content img.rotate-2 {
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+}
+
+#content img.rotate-3 {
+  -webkit-transform: rotate(-0.5deg);
+  -moz-transform: rotate(-2deg);
+}
+
+#content img.rotate-4 {
+  -webkit-transform: rotate(-1deg);
+  -moz-transform: rotate(-1deg);
 }
 
 #content img:hover {
-  border-color: #444;
   cursor: pointer;
+  -moz-box-shadow: 0px 0px 6px rgba(0,0,0,.55);
+  -webkit-box-shadow: 0px 0px 6px rgba(0,0,0,.55);
+  box-shadow: 0px 0px 6px rgba(0,0,0,.55);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#444444')";
+  filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#444444');
+}
+
+#content img:active {
+  -moz-box-shadow: 0px 0px 1px rgba(0,0,0,.55);
+  -webkit-box-shadow: 0px 0px 1px rgba(0,0,0,.55);
+  box-shadow: 0px 0px 1px rgba(0,0,0,.55);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#444444')";
+  filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#444444');
 }
 
 #slide_show {
@@ -389,29 +503,55 @@ p:first-letter {
   font-size: .7em;
 }
 
-
-#image_viewer {
+#overlay {
   display: none;
+}
+
+#disabled_layer {
   position: fixed;
   top: 0;
   left: 0;
-  height: 100%;
-  text-align: center;
-}
-
-#image_viewer .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
+  background: #000;
+  opacity: 0.4;
+  filter: alpha(opacity=40);
   width: 100%;
   height: 100%;
-  background: #000;
-  opacity: 0.5;
-  filter: alpha(opacity=50);
+  z-index: 99;
 }
 
-#image_viewer img {
-  border: 1px solid #000;
-  padding: 10px;
+#pop_up {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+#pop_up img {
+  display: block;
+  border: solid #fff 5px;
+  border-bottom: none;
+}
+
+#pop_up .controls {
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+  text-align: right;
   background: #fff;
+  color: #000;
+}
+
+#pop_up .controls span {
+  padding-right: 20px;
+  cursor: pointer;
+}
+
+#pop_up .controls span:link,
+#pop_up .controls span:visited {
+  color: #000;
+}
+
+#pop_up .controls span:hover,
+#pop_up .controls span:active {
+  color: #444;
 }

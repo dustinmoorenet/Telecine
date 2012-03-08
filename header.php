@@ -20,13 +20,13 @@
       <nav>
         <ul>
           <?php
-            $class = 'class="selected"';
+            $class = ' selected';
             $page = $_SERVER["PHP_SELF"];
           ?>
-          <li><a <?php echo(preg_match('/index.php/i',       $page) ? $class : '') ?>href="index.php">Introduction</a></li>
-          <li><a <?php echo(preg_match('/operation.php/i',   $page) ? $class : '') ?>href="operation.php">Theory of Operation</a></li>
-          <li><a <?php echo(preg_match('/application.php/i', $page) ? $class : '') ?>href="application.php">Application</a></li>
-          <li><a <?php echo(preg_match('/problems.php/i',    $page) ? $class : '') ?>href="problems.php">Problems</a></li>
-          <li><a <?php echo(preg_match('/conclusion.php/i',  $page) ? $class : '') ?>href="conclusion.php">Conclusion</a></li>
+          <li class="index<?php echo(preg_match('/index.php/i', $page) ? $class : '') ?>"><a href="index.php">Introduction</a></li>
+          <li class="operation<?php echo(preg_match('/operation.php/i', $page) ? $class : '') ?>"><a href="operation.php">Theory of Operation</a></li>
+          <li class="application<?php echo(preg_match('/application.php/i', $page) ? $class : '') ?>"><a href="application.php">Application</a></li>
+          <li class="problems<?php echo(preg_match('/problems.php/i', $page) ? $class : '') ?>"><a href="problems.php">Problems</a></li>
+          <li class="conclusion<?php echo(preg_match('/conclusion.php/i', $page) ? $class : '') ?>"><a href="conclusion.php">Conclusion</a></li>
         </ul>
       </nav> 
