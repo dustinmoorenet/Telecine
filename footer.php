@@ -4,6 +4,7 @@
     <div id="overlay"> 
       <div id="disabled_layer"></div>
       <div id="pop_up">
+        <div id="loading"></div>
         <img /><div class="controls">
           <span class="close">Close</span>
         </div>

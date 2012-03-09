@@ -59,7 +59,7 @@ a:active {
 
 nav {
   float: left;
-  width: 200px;
+  width: 160px;
 }
 
 nav ul {
@@ -72,8 +72,6 @@ nav li {
   -moz-box-shadow: 0px 0px 6px rgba(0,0,0,.55);
   -webkit-box-shadow: 0px 0px 6px rgba(0,0,0,.55);
   box-shadow: 0px 0px 6px rgba(0,0,0,.55);
-  -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#444444')";
-  filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#444444');
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   -khtml-border-radius: 3px;
@@ -105,28 +103,33 @@ nav li a {
   padding: 7px;
   text-transform: uppercase;
   font-weight: bold;
-  font-size: .8em;
-  color: rgba(0,0,0,.45);
+  font-size: .9em;
+  color: #130d07;
+  color: rgba(0,0,0,.85);
+  border: 2px dashed #50381b;
+  border-color: rgba(0,0,0, .20);
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   -khtml-border-radius: 3px;
   border-radius: 3px;
-  border: 2px dashed rgba(0,0,0, .20);
 }
 
 nav li a:link,
 nav li a:visited {
-  color: rgba(0,0,0,.45);
+  color: #130d07;
+  color: rgba(0,0,0,.85);
 }
 
-nav li a.selected {
-  color: #444;
-  color: rgba(0,0,0,.60);
+nav li.selected a:link,
+nav li.selected a:visited {
+  color: #efe8e0;
+  color: rgba(255,255,255,.85);
 }
 
 nav li a:hover,
 nav li a:active {
-  color: rgba(0,0,0,.85);
+  color: #d4c6b6;
+  color: rgba(255,255,255,.65);
 }
 
 @media screen and (max-width: 690px) {
@@ -154,8 +157,6 @@ nav li a:active {
     -moz-box-shadow: 0px 0px 6px rgba(0,0,0,.55);
     -webkit-box-shadow: 0px 0px 6px rgba(0,0,0,.55);
     box-shadow: 0px 0px 6px rgba(0,0,0,.55);
-    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#444444')";
-    filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#444444');
   }
 
   nav li {
@@ -188,16 +189,19 @@ nav li a:active {
     -moz-box-shadow: 0px 0px 6px rgba(0,0,0,.55);
     -webkit-box-shadow: 0px 0px 6px rgba(0,0,0,.55);
     box-shadow: 0px 0px 6px rgba(0,0,0,.55);
-    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#444444')";
-    filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#444444');
   }
 
   nav li.selected a {
     background: url('../images/icons.png') 168px -127px no-repeat;
     width: 166px;
-    border: 2px dashed rgba(0,0,0, .20);
+    border: 2px dashed rgba(0,0,0,.20);
     color: rgba(0,0,0,.75);
     display: block;
+  }
+
+  nav li.selected a:link,
+  nav li.selected a:visited {
+    color: rgba(0,0,0,.85);
   }
 
   nav li.selected a:hover,
@@ -210,8 +214,6 @@ nav li a:active {
     -moz-box-shadow: none;
     -webkit-box-shadow: none;
     box-shadow: none;
-    -ms-filter: none;
-    filter: none;
   }
 
   nav li.expanded a {
@@ -243,12 +245,10 @@ nav li a:active {
 
   nav li.selected {
     padding: 5px;
-    font-size: 1.3em;
+    font-size: 1.25em;
     -moz-box-shadow: 0px 0px 9px rgba(0,0,0,.55);
     -webkit-box-shadow: 0px 0px 9px rgba(0,0,0,.55);
     box-shadow: 0px 0px 9px rgba(0,0,0,.55);
-    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#444444')";
-    filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#444444');
   }
 
   nav li.selected a {
@@ -325,8 +325,6 @@ p:first-letter {
   -moz-box-shadow: 0px 0px 3px rgba(0,0,0,.55);
   -webkit-box-shadow: 0px 0px 3px rgba(0,0,0,.55);
   box-shadow: 0px 0px 3px rgba(0,0,0,.55);
-  -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#444444')";
-  filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#444444');
 }
 
 #content img.rotate-0 {
@@ -359,16 +357,12 @@ p:first-letter {
   -moz-box-shadow: 0px 0px 6px rgba(0,0,0,.55);
   -webkit-box-shadow: 0px 0px 6px rgba(0,0,0,.55);
   box-shadow: 0px 0px 6px rgba(0,0,0,.55);
-  -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#444444')";
-  filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#444444');
 }
 
 #content img:active {
   -moz-box-shadow: 0px 0px 1px rgba(0,0,0,.55);
   -webkit-box-shadow: 0px 0px 1px rgba(0,0,0,.55);
   box-shadow: 0px 0px 1px rgba(0,0,0,.55);
-  -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#444444')";
-  filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#444444');
 }
 
 #slide_show {
@@ -526,10 +520,27 @@ p:first-letter {
   z-index: 100;
 }
 
+#pop_up #loading {
+  display: none;
+  width: 300px;
+  height: 300px;
+  border: solid #fff 5px;
+  border-bottom: none;
+  background: #000 url('../images/loading.gif') center center no-repeat;
+}
+
+#pop_up.loading #loading {
+  display: block;
+}
+
 #pop_up img {
   display: block;
   border: solid #fff 5px;
   border-bottom: none;
+}
+
+#pop_up.loading img {
+  display: none;
 }
 
 #pop_up .controls {

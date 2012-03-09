@@ -156,6 +156,11 @@ UI.ImagePopUp = function(_id) {
     } else {
 
       _$overlay.show();
+
+      _$pop_up.addClass('loading');
+      _getSize();
+      _resize();
+
       _$img.attr('src', $(this).data('full-size'));
       $(window).resize(_resize);
     }
@@ -163,15 +168,21 @@ UI.ImagePopUp = function(_id) {
 
   function _close() {
     _$overlay.hide();
+    _$pop_up.removeClass('loading');
     _$img.attr('src', '');
     $(window).unbind('resize', _resize);
   }
 
-  function _onImgLoad() {
-    _$img.height('auto').width('auto');
-
+  function _getSize() {
     _pop_up_orig_height = _$pop_up.height();
     _pop_up_orig_width = _$pop_up.width();
+  }
+
+  function _onImgLoad() {
+    _$pop_up.removeClass('loading');
+    _$img.height('auto').width('auto');
+
+    _getSize();
 
     _img_aspect_ratio = _$img.height() / _$img.width();
 
