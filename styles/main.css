@@ -152,7 +152,7 @@ nav li a:active {
     -webkit-border-radius: 3px;
     -khtml-border-radius: 3px;
     border-radius: 3px;
-    background: url('../images/paper.png');
+    background: #fcfcf3 url('../images/paper.png');
     -moz-box-shadow: 0px 0px 6px rgba(0,0,0,.55);
     -webkit-box-shadow: 0px 0px 6px rgba(0,0,0,.55);
     box-shadow: 0px 0px 6px rgba(0,0,0,.55);
